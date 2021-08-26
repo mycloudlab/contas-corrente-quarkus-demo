@@ -25,6 +25,7 @@ public class ContaCorrenteResource {
   @GET
   @Produces(MediaType.APPLICATION_JSON)
   public Set<ContaCorrente> list() {
+    System.out.println("Recebendo request");
     return contas;
   }
 
@@ -32,6 +33,7 @@ public class ContaCorrenteResource {
   @Produces(MediaType.APPLICATION_JSON)
   @Path("/{cpf}")
   public Response retrive(@PathParam("cpf") String cpf) {
+    System.out.println("Recebendo request");
     List<ContaCorrente> contas = this.contas.stream().filter((p)->cpf.equals(p.getCpf()))  .collect(Collectors
         .toCollection(ArrayList::new));
 
