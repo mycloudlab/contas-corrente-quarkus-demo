@@ -27,7 +27,7 @@ public class ContaCorrenteResource {
   @GET
   @Produces(MediaType.APPLICATION_JSON)
   public Set<ContaCorrente> list() {
-    System.out.println("Recebendo request");
+    
     return contas;
   }
   
